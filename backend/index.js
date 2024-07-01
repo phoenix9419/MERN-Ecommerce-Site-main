@@ -23,6 +23,9 @@ mongoose
 
     
     app.use('/', Routes);
+    app.get("*", (req, res) => {
+        res.send(`<p style="font-size:100px"> Hello, Plz Check Your URL</p>`)
+    })
 app.listen(PORT, () => {
     console.log(`Server started at port no. ${PORT}`)
 })
